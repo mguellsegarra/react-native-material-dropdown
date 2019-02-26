@@ -492,10 +492,9 @@ export default class Dropdown extends PureComponent {
 
     return (
       <TextField
+        lineWidth={0}
         label=""
-        labelHeight={
-          dropdownOffset.top - Platform.select({ ios: 1, android: 2 })
-        }
+        labelHeight={10}
         {...props}
         value={title}
         editable={false}
@@ -718,7 +717,7 @@ export default class Dropdown extends PureComponent {
 
         <Modal
           visible={modal}
-          transparent={true}
+          transparent
           onRequestClose={this.blur}
           supportedOrientations={supportedOrientations}
         >
